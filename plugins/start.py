@@ -50,11 +50,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Wait A Second...")
+        temp_msg = await message.reply("ᴡᴀɪᴛ ᴀ ꜱᴇᴄᴏɴᴅ...")
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("Something went wrong..!")
+            await message.reply_text("ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ..!")
             return
         await temp_msg.delete()
 
@@ -84,7 +84,7 @@ async def start_command(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton('🍁 ᴘʀᴇᴍɪᴜᴍ', url='https://t.me/OtakuFlix_Network/4639')
+                    InlineKeyboardButton('🍁 ᴘʀᴇᴍɪᴜᴍ', url='https://t.me/AnimeArena01')
                 ]
             ]
                 )
@@ -117,15 +117,15 @@ REPLY_ERROR = """<code>Use this command as a reply to any telegram message with 
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="Join Channel", url=client.invitelink),
-            InlineKeyboardButton(text="Join Channel", url=client.invitelink2),
+            InlineKeyboardButton(text="⛩️ ᴄʜᴀɴɴᴇʟ 1 ⛩️", url=client.invitelink),
+            InlineKeyboardButton(text="🍁 ᴄʜᴀɴɴᴇʟ 2 🍁", url=client.invitelink2),
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = 'ᴛʀʏ ᴀɢᴀɪɴ 😮‍💨',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
